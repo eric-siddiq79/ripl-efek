@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account</title>
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+	<link href="assets/fonts/GTAmericaMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="assets/fonts/GT-America-Standard-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<style>
+		@font-face {
+			font-family: 'GT America Mono';
+			src: url('assets/fonts/GTAmericaMono-Regular.woff2') format('woff2'),
+				url('assets/fonts/GTAmericaMono-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'GT America';
+			src: url('assets/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+				url('assets/fonts/GT-America-Standard-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+	</style>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<!--Begin Header -->
+	<header class="group header header--default">
+		<div class="container-fluid header-inner bg-inherit flex items-center justify-between">
+			<a href="">
+				<svg width="138" height="21" viewBox="0 0 138 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M21.7123 3.62243C19.628 3.62243 17.9408 2.00193 17.9408 0L25.4861 0C25.4861 2.00193 23.7966 3.62243 21.7147 3.62243H21.7123ZM18.5706 6.39849L18.5706 20.9785H24.854L24.854 6.40075H18.5706V6.39849ZM27.7137 20.9785H33.9971V15.9206H35.0734C40.8774 15.9206 43.9909 12.1267 43.9909 7.87229C43.9909 3.61791 40.7905 0 35.0757 0L27.7137 0L27.7137 20.9807V20.9785ZM34.9841 5.45959C36.3916 5.45959 37.5877 6.29241 37.5877 7.90163C37.5877 9.51084 36.3916 10.3437 34.9841 10.3437H33.9971V5.45734H34.9841V5.45959ZM45.671 20.9785H58.2989V15.2029H51.9544V0L45.671 0V20.9807V20.9785ZM71.5848 20.9785L84.5417 20.9785V15.4895L77.8095 15.4895V13.1897L84.5417 13.1897V7.67142L77.8095 7.67142V5.51602L84.5417 5.51602V0L71.5848 0V20.9807V20.9785ZM87.4038 20.9785H93.6284V13.1897L100.001 13.1897V7.67142L93.6284 7.67142V5.51602L100.001 5.51602V0L87.4038 0V20.9807V20.9785ZM102.609 20.9785H115.566V15.4895H108.834V13.1897H115.566V7.67142L108.834 7.67142V5.51602L115.566 5.51602V0L102.609 0V20.9807V20.9785ZM9.85748 20.9785L7.24683 15.9206H6.28341L6.28341 20.9785H0L0 0L7.36197 0C13.0767 0 16.2795 3.62017 16.2795 7.87454C16.2795 10.4385 15.1493 12.8308 12.9804 14.3317L16.8928 20.9807L9.85983 20.9807L9.85748 20.9785ZM6.28106 10.3437L7.26798 10.3437C8.67552 10.3437 9.87158 9.53793 9.87158 7.90163C9.87158 6.26533 8.67552 5.45959 7.26798 5.45959H6.28106V10.3459V10.3437ZM137.998 20.9785L130.022 10.2985L137.718 0L130.058 0L124.655 7.23357V0L118.431 0V20.9807H124.655V13.3702L130.34 20.9807L138 20.9807L137.998 20.9785Z"
+						fill="currentColor" />
+				</svg>
+			</a>
+			<nav>
+				<ul class="nav-list flex items-center space-x-4 md:space-x-10 font-secondary">
+					<li class="nav-item"><button class="nav-link modal-trigger" data-target="#cart">BAG (0)</button></li>
+					<li class="nav-item"><button href="#" class="nav-link">MENU</button></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- cart -->
+	<aside
+		class="cart bg-light-extra min-h-[467px] flex flex-col fixed top-0 z-[999] w-full md:max-w-[442px] right-0 max-md:h-full max-h-screen"
+		id="cart">
+		<div class="flex-auto px-6 py-5 h-full flex flex-col">
+			<div class="flex items-center justify-between">
+				<div>
+					Bag(<span>0</span>)
+				</div>
+				<button class="cart-close font-secondary">
+					CLOSE
+				</button>
+			</div>
+
+			<div class="pt-5 pb-6 max-h-[calc(100vh_-_122px)] md:max-h-[332px] overflow-y-auto overflow-x-hidden">
+				<div class="space-y-6">
+					<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+						<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+						<div>
+							<div class="flex space-x-5 justify-between">
+								<div>
+									<h6 class="mb-2">The starter kit</h6>
+									<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+								</div>
+								<p>$68</p>
+							</div>
+							<div class="flex space-x-5 justify-between">
+								<div class="quanity flex items-center space-x-2">
+									<button>-</button>
+									<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+										value="1">
+									<button>+</button>
+								</div>
+								<a class="underline" href="#">Remove</a>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div> -->
+				</div>
+			</div>
+
+			<!-- suggested product -->
+			<div class="bg-aqua -mx-6 p-6">
+				<p class="mb-3.5">Would you like to try a different scent?</h6>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<h6 class="mb-2">ASE REFILL</h6>
+						<p class="mb-8">$68</p>
+						<a href="#" class="underline">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Show when cart is empty -->
+			<!-- <div class="pt-5 pb-6 flex-1 flex flex-col justify-center max-h-[calc(100vh_-_122px)] md:max-h-[332px]">
+			<div>
+				<p class="mb-6">Nothing in your bag.</p>
+				<a class="underline" href="#">Get Started</a>
+			</div>
+		</div> -->
+
+			<div class="border-t border-current pt-3.5 mt-auto">
+				<div class="flex items-center justify-between space-x-6 mb-3.5">
+					<p>Subtotal</p>
+					<p>$00</p>
+				</div>
+				<a class="btn btn-primary w-full" href="#">Checkbout</a>
+			</div>
+		</div>
+	</aside>
+	<!-- End Header -->
+
+	<main class="main">
+
+		<section class="py-12 md:py-[85px]">
+			<div class="container-fluid">
+				<div class="max-w-[997px] mx-auto">
+					<div class="mb-12 md:mb-[85px] text-center">
+						<h1>Privacy Policy</h1>
+					</div>
+					<div class="content">
+						<p>This Privacy Policy & Cookies Notice (“Notice”) describes how Bragg Live Food Products, LLC
+							(hereinafter “Bragg”, “we”, “our”, or “us”) collects, uses, and discloses information about you
+							when you access or use any portion of our website and the information and services made available
+							to you when you visit our website (the “Site”). The types of information we collect depend on how
+							you use our Site. We may update this Notice at any time, and we will indicate at the top of this
+							page the date it was last revised. If you have any questions about this Notice, please do not
+							hesitate to contact us at privacy@bragg.com</p>
+
+						<p>Types of Information Collected by Bragg</p>
+
+						<p>The most common information we collect is the information you provide us. For instance, when you
+						create an account with us or contact us through the online portal provided on our Site to ask
+						questions or subscribe to our newsletter, we ask you to provide certain personal information, such as
+						your name, company, email address, location, and other contact details. If you contact us by phone,
+						email, social media, or by some other means, we may keep a record of that correspondence and any
+						information that you submitted in connection therewith. When we send you emails, including
+						newsletters, we may also track if you open them. We may also collect other content and information you
+						share by commenting on or participating in online forums and similar social media communities, or when
+						you otherwise interact with us by any other means. If you want to purchase our products from the Site,
+						it is our policy to redirect you to a third-party merchant. The Site may ask you to enter information
+						about your location in order to direct you to the retailer nearest to you. Or the Site may direct you
+						to a third-party online retailer. Please refer to those third-parties’ privacy policies and terms of
+						use to learn more about their privacy practices, which we do not control. You may also purchase our
+						products over the phone with one of Bragg’s customer service representatives. The phone representative
+						may request certain personal information in order to complete the transaction, such as your name,
+						company, email address, shipping address, phone number and other contact details. They may also
+						request payment information, such as your credit or debit card number or your bank account number in
+						order to process payments from you or to remit payments to you in connection with your purchase. When
+						you make a purchase or return, we collect information about the transaction, such as product details,
+						purchase price, and date and location of the transaction.</p>
+
+						<p>We (and our service providers) may collect information about how you use and interact with the Site
+						using various technologies, such as cookies or web beacons. A cookie is a small text file that any
+						website, including ours, places in your internet browser to save your preferences. We may use cookies
+						to collect information about your location, your browser, when you accessed the Site and for how long,
+						the website address that linked you to our Site, and the website you visited after leaving our Site.
+						We may also use cookies to share information with other websites, media partners and social networks
+						in order to offer you pertinent promotional and adverting communications that match your interests
+						(third party cookies). Most browsers allow you to block and delete cookies. You may disable the
+						installation of cookies by configuring your browser appropriately. However, if you do that, please be
+						aware that the Site may not work properly. If you do not wish Bragg to use all or part of the
+						above-mentioned cookies, please contact us at privacy@bragg.com. We may also utilize web analytics to
+						help us improve our Site and increase website traffic. For example, we may use Google Analytics or
+						other similar service providers to track and analyze our website data such as how many visitors we are
+						getting, how long they stayed on the Site, their browsing habits, and their geographical location.
+						Examining data from web analytics helps us understand who typically visits our Site, how they get to
+						our Site, and what parts of are Site are viewed or visited most often. Understanding our audience
+						helps us improve the products and services we provide to our customers.</p>
+
+						<p>When and Why Bragg May Use Your Information</p>
+
+						<p>We use your information for a variety of business and commercial purposes, such as for the purpose of:
+						processing or fulfilling orders and transactions; providing customer service; marketing and
+						advertising; internal research; providing, maintaining and improving our products and services;
+						understanding our audience and improving the Site; communicating with you about our products;
+						analyzing trends and usage of our Site; investigating and preventing fraud or other illegal
+						activities, including any violation of our Terms of Use; maintaining appropriate records for internal
+						administrative and accounting purposes; and for any other purpose communicated to you at the time the
+						information was collected or as permitted by law.</p>
+
+						<p>When and Why Bragg May Share your Information with Others</p>
+
+						<p>We may share your information with other companies, third-party merchants, vendors, consultants and
+						other service providers to assist us with the overall operation of our company. Our business
+						operations rely on many third-party vendors that offer a variety of helpful services such as:
+						marketing and advertising, logistics; order fulfillment; shipping; web hosting; ecommerce and online
+						selling platforms; internet infrastructures; cloud computing; payment collection and processing; site
+						analytics and optimization; inbound and outbound email services; spam filtering; social networking;
+						and both direct and computer-mediated services that facilitate the creation or sharing of information,
+						ideas, interests and other forms of expression related to the promotion and sale of our products.
+						Please refer to these third-parties’ privacy policies and terms of use to learn more about their
+						privacy practices, which we do not control. We cannot control or be held responsible for third
+						parties’ privacy practices. There is also a chance we may share your personal information with others
+						in order to: comply with government regulations, respond to court orders, comply with subpoenas or
+						warrants, or adhere to other legal requirements; facilitate internal audits, company valuation or
+						related internal due diligence; assist with the negotiation of or actual change of control or
+						ownership in the company due to investment, merger, sale of company assets, financing or acquisition;
+						and to personalize advertisements or connect you with merchants we believe you may be interested in
+						and vice versa.</p>
+
+						<p>Data security.</p>
+					
+						<p>We protect your personal data with various technical and organizational security measures that aim to
+							minimize risks associated with data loss and the unauthorized use, disclosure and alteration of data.
+							To this end, we use technology like firewalls and data encryption. We also restrict access to data
+							with authorization controls for data access. Additionally, you should take all steps necessary to
+							maintain the privacy of your accounts and related log-in and password information as well as restrict
+							access by others to your computer devices. Our privacy and security features have limits. If you
+							suspect that someone other than you has accessed your account, email, or otherwise acted in a
+							fraudulent way insofar as it concerns your relationship with Bragg, please notify us immediately.</p>
+						<p>Your Choices</p>
+						<p>Many web browsers accept cookies by default. You have the choice to remove or reject browser cookies.
+							Please note that if you choose to remove or reject cookies, this could affect your use of and the
+							functionality of our Site. Further, we only want to communicate with those who want to hear from us.
+							You have the right to unsubscribe from our emails and newsletters at any time by simply clicking the
+							designated “unsubscribe” link. If you would like to delete, update or correct your email address,
+							mailing address, phone number or other contact information you provided us, please contact us at
+							privacy@bragg.com. Requests to remove or update your contact information may take up to fifteen
+							business days.</p>
+						<p>Storage of Data</p>
+						<p>We may store data until it is no longer necessary. This determination is made on a case-by-case basis
+							and depends on the nature of the data. For example, it may be necessary to store personal data
+							regarding pending or future legal disputes, or for things like maintaining and improving our Site and
+							our products, or for keeping our systems secure, or for maintaining appropriate business and financial
+							records. Personal data contained in contracts, documents, notifications and other business
+							correspondence may also be subject to statutory storage obligations depending on the law in the
+							applicable region.</p>
+						<p>Links to Third Party Websites</p>
+						<p>Our Site may contain links to websites operated and maintained by third parties, over which we have no
+							control, including social media websites hosted by third-party providers. However, this Privacy Notice
+							only addresses Bragg’s collection and use of your information, if any. Your access to such third-party
+							websites is solely at your own risk. You should read the privacy policy and terms and conditions of
+							any other website before using and disclosing any of your information on such website.</p>
+						<p>The Global Distribution of our Products</p>
+						<p>We have authorized distributors located outside of the United States. Your information may be
+							transferred, transmitted to, stored, or processed in the United States or other areas located outside
+							your country as necessary for us to provide our Products to consumers throughout the world. We may
+							utilize third-party platforms, domains, and other third-party service providers located outside your
+							country to assist us in the global promotion, sale and distribution of our products. We carefully
+							select business partners that have effective security measures and safeguards in place, however you
+							should consult their terms of use and privacy policies, which we have no control over, to determine
+							how they collect and use data. Because some recipients of your personal data are located outside your
+							country, please note that protection laws may provide a different level of protection than the laws in
+							your country.</p>
+						<p>Your Privacy Rights</p>
+						<p>In those countries where we are required to do so by law, you may have the right to be informed as to
+							how and whether your personal data is being collected and obtain a copy thereof, and in some cases,
+							you may have the right to request erasure of your personal data. For further questions about your
+							privacy rights, please contact privacy@bragg.com. Finally, you may have the right to lodge a complaint
+							with a supervisory authority of the national or regional privacy laws applicable to you.</p>
+						<p>Data Protection Officer</p>
+						<p>In those countries where we are required to do so by law, we have appointed a Data Protection Officer
+							to oversee the processing and protection of your personal data. Our Data Protection Officer can be
+							contacted by email at privacy@bragg.com or through physical mail to the attention of the Data
+							Protection Officer for Bragg Live Food Products, LLC, Box 7, Santa Barbara, California, USA, 93102.</p>
+						<p>Supplemental Privacy Statement for California Consumers</p>
+						<p>If you are a California consumer, the information below also applies to you and supplements the terms
+						of this Notice. If you are a California consumer and current or potential employee of Bragg, this
+						Notice and these additional terms are further supplemented by Bragg’s internal employee privacy
+						policies, which are not disclosed herein. Certain terms used in this section have the meaning given to
+						them in California Civil Code § 1798.100, et seq. (the “CCPA”). In accordance with the CCPA, during
+						the twelve months since we last updated this Privacy Notice, we may have:</p>
+						<p>1. Collected the following categories of personal information about you:</p>
+						<p>Identifiers such as name, username, alias, shipping address, unique personal identifiers (such as
+							pixels, cookies, web beacons), IP address, email address, phone number, customer number, information
+							obtained from identification cards, bank account information, financial information, or other similar
+							identifiers;</p>
+						<p>Internet or other electronic network activity information such as domain information, IP address,
+							pages visited before and after you visited our Site, cookie information, and session information such
+							as time spent on certain pages and page interaction;</p>
+						<p>Geolocation information such as location of your computer device to help us determine and recommend
+							nearest third-party merchants that sell our products and also to help us determine where our website
+							traffic is originating from;</p>
+						<p>Commercial information about the goods you purchased or considered purchasing and other purchasing
+							histories or tendencies;</p>
+						<p>Legally protected classifications such as age, gender, marital status, veteran or military status;</p>
+						<p>Payment information (under California Civil Code 1798.80) such as billing data;</p>
+						<p>Information you post such as comments on social media;</p>
+						<p>Inferences drawn from any of the information identified above to understand your preferences,
+							interests and trends.</p>
+						<p>2. Collected your personal information from the following categories of sources:</p>
+
+						<p>(a) Directly from you, for example, when you enter your data on our Site, create an account, subscribe
+							to our emails, make a purchase, and interact with us on the phone or online;</p>
+						<p>(b) Directly and indirectly from you due to your usage of and activity on our Site, social media
+							pages, and mobile applications;</p>
+						<p>(c) From our third-party vendors, merchants, and service providers that help us run our business such
+							those that we use to fulfill orders, provide logistics, process your payments, verify your
+							information, provide analysis and analytics, maintain our directories and databases, administer and
+							monitor emails and marketing, administer and send emails, newsletters and ads, and provide consulting
+							services.</p>
+						<p>3. Used your personal information for one or more of the following business or commercial purposes:</p>
+						<p>(a) Providing customer service and communications with you with you at your request, including
+							responding to your emails, phone calls, requests or inquiries;</p>
+						<p>(b) Processing or fulfilling orders and transactions including, as applicable, order confirmation,
+							billing, enrollment in any contest, awards, loyalty or other programs, and delivering products;</p>
+						<p>(c) Providing, maintaining and improving products and services;</p>
+						<p>(d) Marketing and advertising;</p>
+
+						<p>(e) Web Analytics and site optimization, including creating aggregated, pseudonymized, or anonymized
+						information for analytical and statistical purposes;</p>
+
+						<p>(f) Internal research;</p>
+
+						<p>(g) Personalizing your experience online including offers from other companies you may like;</p>
+
+						<p>(h) Providing you with newsletters, articles, product or service alerts, and announcements;</p>
+
+						<p>(i) Including you in market research, surveys, promotions, sweepstakes, and contests;</p>
+
+						<p>(j) Evaluating your shopping experience or existing products to create new items;</p>
+
+						<p>(k) Interacting with you when you contact us as a vendor or on behalf of another business and keeping
+						a record of all interactions with consumers if they place an order or communicate with us over the
+						telephone or online;</p>
+
+						<p>(l) Verifying and validating your identity or otherwise preventing, investigating fraud, unlawful,
+						unauthorized or criminal activity, or unauthorized access to or use of personal information, our
+						websites or data systems;</p>
+
+						<p>(m) Enabling you to interact with service providers, whether by linking to their sites or allowing the
+						viewing of their content within our online environment or content within their online environment</p>
+
+						<p>4. Shared your personal information with these categories of vendors:</p>
+
+						<p>(a) Service providers such as IT vendors, cloud computing providers, providers of online business and
+						ecommerce platforms; background applications, database providers, customer service vendors and other
+						service providers that need access to such information to perform services for us;</p>
+
+						<p>(b) Ad networks, ad tech vendors, social networks, and other marketing and advertising vendors;</p>
+
+						<p>(c) Data analytics providers;</p>
+
+						<p>(d) Third-party payment processors;</p>
+
+						<p>(e) Logistics service providers</p>
+
+						<p>Right to Opt-out of Sale of Personal Information</p>
+
+						<p>The CCPA gives consumers the ability to direct a business not to sell their personal information to a
+						third party. We do not sell your personal information, and therefore this requirement does not apply
+						to us. As detailed herein, we and our service providers only use personal information to the extent
+						necessary to perform our normal business operations and help us communicate with and understand our
+						customers.</p>
+
+						<p>California Consumer Privacy Rights</p>
+
+						<p>California residents have the right to request that we disclose the categories of personal information
+						collected; the categories of sources from which personal information is collected; the business or
+						commercial purpose; the categories of third parties with which the businesses shares personal
+						information, and other information we may have about you. Similarly, California residents can request
+						that we delete certain pieces of their personal information, excluding aggregated non-identifiable
+						information that we collect to improve our services. You may submit a written request to
+						privacy@bragg.com. After you (or an agent which you authorize) submit a request to access or delete
+						your personal information, we are required to “verify” that your request is not fraudulent. Thus, upon
+						receiving your request, we may use various verification methods to verify the request as the
+						circumstances dictate.</p>
+
+						<p>We reserve the right to deny your deletion request if we determine that retaining the information is
+						necessary for us or our service provider(s) to: attend to pending or future legal disputes; keep our
+						websites and systems secure and identify and repair errors that impair site functionality; maintain
+						appropriate business and financial records; complete the transaction for which we collected the
+						personal information or otherwise perform our contract with you; detect or protect against fraudulent,
+						or illegal activity, or prosecute those responsible for such activities; ensure the right of free
+						speech; comply with a legal obligation; or make other internal and lawful uses of that information.</p>
+
+						<p>Right to Non-Discrimination: We will not discriminate against you for exercising any of your CCPA
+						rights. Unless permitted by the CCPA, we will not: Deny you goods or services; charge you different
+						prices or rates for goods or services, including through granting discounts or other benefits, or
+						imposing penalties; or provide you a different level or quality of goods or services.</p>
+
+						<p>Do Not Track Signals: Our systems do not recognize "Do Not Track" signals to the extent received from
+						a web browser.</p>
+
+						<p>If you have any questions or complaints regarding this Notice, our global privacy standards or our
+						handling of personal data, you can contact the Bragg’s Privacy Team by email to privacy@bragg.com
+						(contacting privacy@bragg.com will connect you with those at Bragg who are responsible for the
+						handling of personal data, which includes our appointed data protection officer in your country, if
+						applicable).</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Begin newsletter -->
+	<div
+		class="fixed bottom-12 right-[0.94375rem] lg:bottom-6 lg:right-6 bg-aqua py-6 pl-6 pr-9 newsletter w-full max-w-[345px] lg:max-w-[456px] hidden js-newsletter z-50">
+		<p>Join our newsletter for the latest news and receive 10% off your first purchase.</p>
+
+		<form action="#" class="mt-9">
+			<div class="relative">
+				<input class="input pr-14" type="text" placeholder="Email address" aria-label="Full name">
+				<button class="p-0 bg-transparent border-none absolute right-0">Submit</button>
+			</div>
+		</form>
+
+
+		<button
+			class="absolute top-0 right-0 text-dark  w-6 h-6 flex items-center justify-center lg:bg-aqua js-newsletter-close"
+			type="button"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1103_629)">
+					<path d="M9.2105 0.724609L0.72522 9.20989" stroke="currentColor" />
+					<path d="M9.27471 9.21185L0.789429 0.726562" stroke="currentColor" />
+				</g>
+				<defs>
+					<clipPath id="clip0_1103_629">
+						<rect width="10" height="10" fill="white" />
+					</clipPath>
+				</defs>
+			</svg>
+		</button>
+	</div>
+	<!-- ./End newsletter -->
+
+	<!-- Begin cookie -->
+	<div class="cookie hidden fixed bottom-0 lg:bottom-6 right-0 lg:right-6 js-cookiebar z-50">
+		<div class="flex items-center lg:gap-1 py-[0.3125rem] px-[0.9375rem] lg:px-0 bg-secondary lg:bg-transparent">
+			<div class="lg:h-6 pr-6 lg:py-[0.1875rem] lg:px-2 lg:bg-secondary max-md:text-12">By continuing to use this
+				site you consent with our <a href="#">cookie policy</a>.</div>
+			<button
+				class="text-dark flex-grow-0 flex-shrink-0 basis-6 w-6 h-6 flexg- flex items-center justify-center lg:bg-secondary js-cookie-close"
+				type="button"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_1103_629)">
+						<path d="M9.2105 0.724609L0.72522 9.20989" stroke="currentColor" />
+						<path d="M9.27471 9.21185L0.789429 0.726562" stroke="currentColor" />
+					</g>
+					<defs>
+						<clipPath id="clip0_1103_629">
+							<rect width="10" height="10" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<!-- ./End cookie -->
+
+
+	<!-- Begin footer -->
+	<footer class="theme-light pt-[0.9375rem] pb-[1.125rem] lg:pt-4 lg:pb-8 px-[0.9375rem] lg:px-6 group">
+		<div class="grid grid-cols-2 md:grid-cols-12 gap-3xl lg:gap-8 md:gap-y-0 group-[.bg-dark]:text-secondary">
+			<div class="col-span-1 md:col-start-4 lg:col-start-7 md:col-end-7 lg:col-end-9">
+				<ul>
+					<li><a class="hover:underline" href="#">Our Story</a></li>
+					<li><a class="hover:underline" href="#">How to Use</a></li>
+					<li><a class="hover:underline" href="#">Hacks</a></li>
+					<li><a class="hover:underline" href="#">Instagram</a></li>
+					<li><a class="hover:underline" href="#">Tiktok</a></li>
+					<li><a class="hover:underline" href="#">Pinterest</a></li>
+				</ul>
+			</div>
+			<div class="col-start-2 col-span-1 md:col-start-7 lg:col-start-9 md:col-end-13">
+				<div class="lg:w-3/4 max-md:flex max-md:justify-end">
+					<ul>
+						<li><a class="hover:underline" href="#">FAQs</a></li>
+						<li><a class="hover:underline" href="#">Store Locator</a></li>
+						<li><a class="hover:underline" href="#">Shipping & Returns</a></li>
+						<li><a class="hover:underline" href="#">Privacy Policy</a></li>
+						<li><a class="hover:underline" href="#">Terms</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="md:row-start-2 col-span-2 md:col-start-7 lg:col-start-9 md:col-end-13 max-md:mb-[204px]">
+				<p class="lg:w-3/4">Ripl Efek’s mission is to ensure your threads stay fresh, your skin stays comfy, and
+					the world stays a little cleaner,
+					one wash at a time.</p>
+			</div>
+			<div class="col-span-2 md:row-start-3 md:col-start-1 md:col-span-5 lg:col-span-8 self-end">
+				<a href="index.html">
+					<svg class="max-w-full" width="480" height="73" viewBox="0 0 480 73" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M75.521 12.6038C68.2714 12.6038 62.4029 6.96547 62.4029 0L88.6473 0C88.6473 6.96547 82.7707 12.6038 75.5292 12.6038H75.521ZM64.5934 22.2628L64.5934 72.9921H86.4487L86.4487 22.2707L64.5934 22.2707V22.2628ZM96.3956 72.9921H118.251L118.251 55.3939H121.994C142.182 55.3939 153.012 42.1933 153.012 27.3907C153.012 12.5881 141.88 0 122.002 0L96.3956 0L96.3956 73V72.9921ZM121.684 18.996C126.579 18.996 130.74 21.8937 130.74 27.4928C130.74 33.0919 126.579 35.9896 121.684 35.9896H118.251V18.9882H121.684V18.996ZM158.856 72.9921L202.779 72.9921V52.8967H180.711V0L158.856 0V73V72.9921ZM248.991 72.9921L294.058 72.9921V53.894H270.642V45.892H294.058V26.6918L270.642 26.6918V19.1923L294.058 19.1923V0L248.991 0V73V72.9921ZM304.013 72.9921H325.664V45.892H347.83V26.6918L325.664 26.6918V19.1923L347.83 19.1923V0L304.013 0V73V72.9921ZM356.902 72.9921H401.97V53.894H378.553V45.892H401.97V26.6918L378.553 26.6918V19.1923L401.97 19.1923V0L356.902 0V73V72.9921ZM34.2869 72.9921L25.2064 55.3939H21.8553L21.8553 72.9921H0L0 0L25.6069 0C45.4843 0 56.6244 12.596 56.6244 27.3986C56.6244 36.3194 52.6931 44.6434 45.1492 49.8655L58.7577 73L34.2951 73L34.2869 72.9921ZM21.8472 35.9896H25.2799C30.1757 35.9896 34.3359 33.1861 34.3359 27.4928C34.3359 21.7995 30.1757 18.996 25.2799 18.996H21.8472V35.9974V35.9896ZM479.992 72.9921L452.252 35.8325L479.019 0L452.374 0L433.584 25.1684V0L411.933 0V73H433.584V46.5202L453.355 73H480L479.992 72.9921Z"
+							fill="currentColor" />
+					</svg>
+				</a>
+			</div>
+			<div class="col-span-2 md:row-start-3 md:col-start-7 lg:col-start-9 md:col-end-13">
+				<div class="newsletter md:mt-24 lg:mt-[12.625rem]">
+					<p>Sign up for the latest news</p>
+					<form action="#" class="mt-12 md:mt-8">
+						<div class="relative z-0 w-full group">
+							<input type="email" name="email"
+								class="block py-1.5 px-0 w-full text-body text-current bg-transparent border-0 border-b border-current appearance-none focus:outline-none focus:ring-0 group-[.bg-secondary]:border-dark"
+								placeholder="Email address" />
+							<button class="absolute right-0 bottom-1.5">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+
+</body>
+<script src="assets/js/bundle.js"></script>
+
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home</title>
+		<link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+		<link href="assets/fonts/GTAmericaMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link href="assets/fonts/GT-America-Standard-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<style>
+			@font-face {
+				font-family: 'GT America Mono';
+				src: url('assets/fonts/GTAmericaMono-Regular.woff2') format('woff2'),
+					url('assets/fonts/GTAmericaMono-Regular.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: 'GT America';
+				src: url('assets/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+					url('assets/fonts/GT-America-Standard-Regular.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+
+	<body>
+		<!--Begin Header -->
+		<header class="header">
+			<div class="container-fluid header-inner bg-inherit flex items-center justify-between transition-colors duration-300">
+				<a href="index.html">
+					<svg width="138" height="21" viewBox="0 0 138 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M21.7123 3.62243C19.628 3.62243 17.9408 2.00193 17.9408 0L25.4861 0C25.4861 2.00193 23.7966 3.62243 21.7147 3.62243H21.7123ZM18.5706 6.39849L18.5706 20.9785H24.854L24.854 6.40075H18.5706V6.39849ZM27.7137 20.9785H33.9971V15.9206H35.0734C40.8774 15.9206 43.9909 12.1267 43.9909 7.87229C43.9909 3.61791 40.7905 0 35.0757 0L27.7137 0L27.7137 20.9807V20.9785ZM34.9841 5.45959C36.3916 5.45959 37.5877 6.29241 37.5877 7.90163C37.5877 9.51084 36.3916 10.3437 34.9841 10.3437H33.9971V5.45734H34.9841V5.45959ZM45.671 20.9785H58.2989V15.2029H51.9544V0L45.671 0V20.9807V20.9785ZM71.5848 20.9785L84.5417 20.9785V15.4895L77.8095 15.4895V13.1897L84.5417 13.1897V7.67142L77.8095 7.67142V5.51602L84.5417 5.51602V0L71.5848 0V20.9807V20.9785ZM87.4038 20.9785H93.6284V13.1897L100.001 13.1897V7.67142L93.6284 7.67142V5.51602L100.001 5.51602V0L87.4038 0V20.9807V20.9785ZM102.609 20.9785H115.566V15.4895H108.834V13.1897H115.566V7.67142L108.834 7.67142V5.51602L115.566 5.51602V0L102.609 0V20.9807V20.9785ZM9.85748 20.9785L7.24683 15.9206H6.28341L6.28341 20.9785H0L0 0L7.36197 0C13.0767 0 16.2795 3.62017 16.2795 7.87454C16.2795 10.4385 15.1493 12.8308 12.9804 14.3317L16.8928 20.9807L9.85983 20.9807L9.85748 20.9785ZM6.28106 10.3437L7.26798 10.3437C8.67552 10.3437 9.87158 9.53793 9.87158 7.90163C9.87158 6.26533 8.67552 5.45959 7.26798 5.45959H6.28106V10.3459V10.3437ZM137.998 20.9785L130.022 10.2985L137.718 0L130.058 0L124.655 7.23357V0L118.431 0V20.9807H124.655V13.3702L130.34 20.9807L138 20.9807L137.998 20.9785Z"
+							fill="currentColor" />
+					</svg>
+				</a>
+				<nav>
+					<ul class="nav-list flex items-center space-x-4 md:space-x-10 font-secondary">
+						<li class="nav-item"><button class="nav-link modal-trigger" data-target="#cart">BAG (0)</button></li>
+						<li class="nav-item"><button class="nav-link js-nav-toggler">MENU</button></li>
+					</ul>
+				</nav>
+			</div>
+			<nav class="fixed inset-0 bg-secondary z-50 text-dark hidden js-nav nav">
+				<div class="pt-[3.3125rem] lg:pt-9 pb-3xl lg:pb-5 px-[0.9375rem] lg:px-6 relative w-full h-full flex flex-col gap-6">
+					<div class="max-lg:order-2 lg:flex-1 grid grid-cols-2 lg:grid-cols-6 gap-3xl lg:gap-8 nav__row">
+						<div class="max-lg:order-2 flex w-[8.875rem] h-44 bg-light-extra">
+							<a href="#">
+								<img src="assets/images/menu-image.png" alt="">
+							</a>
+						</div>
+					</div>
+
+					<div class="max-lg:order-1 flex-1 flex flex-col lg:grid grid-cols-3 gap-3xl lg:gap-8 lg:items-center nav__row">
+						<div class="lg:flex gap-6">
+							<a class="mb-2 lg:mb-0 inline-block uppercase hover:underline" href="#">SHOP</a>
+							<ul>
+								<li><a href="#" class="hover:underline">The Starter Kit</a></li>
+								<li><a href="#" class="hover:underline">Unscented Refill</a></li>
+								<li><a href="#" class="hover:underline">Ase Refill</a></li>
+							</ul>
+						</div>
+
+						<div class="lg:flex gap-6">
+							<a class="mb-2 inline-block lg:mb-0 uppercase hover:underline" href="#">ABOUT</a>
+							<ul>
+								<li><a href="#" class="hover:underline">Our Story</a></li>
+								<li><a href="#" class="hover:underline">How to Use</a></li>
+							</ul>
+						</div>
+
+						<div class="lg:flex gap-6">
+							<a class="mb-2 inline-block lg:mb-0 uppercase" href="#">info</a>
+							<ul>
+								<li><a class="hover:underline" href="#">FAQs</a></li>
+								<li><a class="hover:underline" href="#">Unscented Refill</a></li>
+								<li><a class="hover:underline" href="#">account</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="max-lg:order-3 lg:flex-1 grid grid-cols-3 gap-8 nav__row items-end">
+						<a href="index.html" class="col-span-2">
+							<img src="/assets/svgs/nav-logo.svg" alt="Ripl Efek">
+						</a>
+					</div>
+					<button class="absolute top-5 right-4 lg:right-6 js-close" type="button">CLOSE</button>
+				</div>
+			</nav>
+		</header>
+		<!-- End Header -->
+
+		<!-- cart -->
+		<aside class="cart bg-light-extra min-h-[467px] flex flex-col fixed top-0 z-[999] w-full md:max-w-[442px] right-0 max-md:h-full max-h-screen" id="cart">
+			<div class="flex-auto px-[0.9375rem] lg:px-6 py-5 h-full flex flex-col">
+				<div class="flex items-center justify-between">
+					<div>
+						Bag  (<span>0</span>)
+					</div>
+					<button class="cart-close font-secondary">
+						CLOSE
+					</button>
+				</div>
+
+				<div class="pt-5 pb-6 max-h-[calc(100vh_-_122px)] md:max-h-[332px] overflow-y-auto overflow-x-hidden">
+					<div class="space-y-[0.9375rem] lg:space-y-6">
+						<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+							<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+							<div>
+								<div class="flex space-x-5 justify-between">
+									<div>
+										<h6 class="mb-2">The starter kit</h6>
+										<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+									</div>
+									<p>$68</p>
+								</div>
+								<div class="flex space-x-5 justify-between">
+									<div class="quanity flex items-center lg:space-x-2">
+										<button>-</button>
+										<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1" value="1">
+										<button>+</button>
+									</div>
+									<a class="underline" href="#">Remove</a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div> -->
+					</div>
+				</div>
+
+				<!-- suggested product -->
+				<div class="bg-aqua -mx-[0.9375rem] lg:-mx-6 p-[0.9375rem] lg:p-6">
+					<p class="mb-3.5">Would you like to try a different scent?</h6>
+					<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+						<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+						<div>
+							<h6 class="mb-2">ASE REFILL</h6>
+							<p class="mb-8">$68</p>
+							<a href="#" class="underline">Add to Bag</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Show when cart is empty -->
+				<!-- <div class="pt-5 pb-6 flex-1 flex flex-col justify-center max-h-[calc(100vh_-_122px)] md:max-h-[332px]">
+			<div>
+				<p class="mb-6">Nothing in your bag.</p>
+				<a class="underline" href="#">Get Started</a>
+			</div>
+		</div> -->
+
+				<div class="border-t border-current pt-3.5 mt-auto">
+					<div class="flex items-center justify-between space-x-6 mb-3.5">
+						<p>Subtotal</p>
+						<p>$00</p>
+					</div>
+					<a class="btn btn-primary w-full" href="#">Checkbout</a>
+				</div>
+			</div>
+		</aside>
+		<!-- End Header -->
+
+		<main class="main">
+
+			<!-- Begin Hero -->
+			<section class="hero -mt-[53px] md:-mt-[58px] relative h-screen overflow-hidden">
+				<picture class="h-full">
+					<source media="(min-width: 768px)" srcset="assets/images/hero.png">
+					<source media="(max-width: 767.9px)" srcset="assets/images/hero-m.jpg">
+					<img class="object-cover w-full" src="assets/images/hero.png" alt="">
+				</picture>
+
+				<div class="absolute inset-0 p-4 lg:p-6 flex items-end">
+					<img src="/assets/svgs/ripl-logo.svg" alt="">
+				</div>
+
+				<div class="absolute inset-0">
+					<div class="container-fluid lg:grid grid-cols-3 pt-[3.6875rem] lg:pt-5 gap-8">
+						<div class="max-lg:hidden col-span-2"></div>
+						<div class="col-span-1">
+							<div class="md:max-w-[150px] xl:max-w-[232px]">
+								<p class="text-secondary">Meet the unsung hero of clean – a laundry legend that's all about the natural vibe.</p>
+								<a href="#" class="btn btn-primary mt-3xl lg:mt-8">Shop The Starter Kit</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./End hero -->
+
+
+			<!-- Begin ingredients -->
+			<section class="py-12 lg:py-[85px]">
+				<div class="container-fluid">
+					<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3xl md:gap-8">
+						<div class="col-span-1">
+							<h6 class="mb-1 lg:mb-2">FUNCTIONAL INGREDIENTS</h6>
+							<p>This cleaning wizard, crafted with eco-smarts and performance know-how, doesn't just detox and
+								cleanse; it's like a guardian
+								angel for your skin and those cherished threads you call clothes.</p>
+						</div>
+						<div class="col-span-1">
+							<h6 class="mb-1 lg:mb-2">MADE FOR SKIN</h6>
+							<p>Plant-based vibes and sensitive skin high-fives are the name of the game. It's got that
+								biodegradable magic touch, saying goodbye
+								to dirt and oil on textiles while giving a nod to your skin's natural oils.</p>
+						</div>
+						<div class="col-span-1">
+							<h6 class="mb-1 lg:mb-2">NATURALLY PURE</h6>
+							<p>Now, let's talk real talk: no sulfates, no traditional preservative fuss, and definitely no GMO
+								shenanigans. Just pure, clean
+								vibes that don't mess around.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./End ingredients -->
+
+
+			<!-- Begin show case -->
+			<section class="showcase">
+				<div class="md:hidden md:sticky md:top-[3.625rem] md:col-span-1 md:order-2">
+					<div class="relative ">
+						<picture>
+							<source media="(min-width: 576px)" srcset="assets/images/product.jpg">
+							<source media="(max-width: 576px)" srcset="assets/images/product.jpg">
+							<img class="w-full object-cover" src="assets/images/product.jpg" alt="" loading="lazy">
+						</picture>
+
+						<div class="absolute top-[0.9375rem] lg:top-6 left-[0.9375rem] lg:left-8 font-secondary">
+							<h6 class="uppercase font-normal">the starter kit</h6>
+							<span>$00.00</span>
+						</div>
+
+						<a href="#" class="btn btn-primary absolute left-[0.9375rem] lg:left-8 bottom-[0.9375rem] lg:bottom-6">Shop The Starter Kit</a>
+
+					</div>
+				</div>
+
+				<div class="md:container-fluid showcase-container">
+					<div class="scroll-wrapper max-md:flex">
+						<div class="md:grid md:grid-cols-3 gap-8 items-start showcase__item">
+							<div class="max-md:hidden md:sticky md:top-[3.625rem] md:col-span-1 md:order-2">
+								<div class="relative ">
+									<picture>
+										<source media="(min-width: 576px)" srcset="assets/images/product.jpg">
+										<source media="(max-width: 576px)" srcset="assets/images/product.jpg">
+										<img class="w-full object-cover" src="assets/images/product.jpg" alt="" loading="lazy">
+									</picture>
+
+									<div class="absolute top-6 left-8 font-secondary">
+										<h6 class="uppercase font-normal">the starter kit</h6>
+										<span>$00.00</span>
+									</div>
+
+									<a href="#" class="btn btn-primary absolute left-8 bottom-6">Shop The Starter Kit</a>
+
+								</div>
+							</div>
+							<div class="md:col-span-2">
+								<div class="relative flex">
+									<picture class="w-full">
+										<source media="(min-width: 576px)" srcset="assets/images/kit.jpg">
+										<source media="(max-width: 576px)" srcset="assets/images/kit-m.jpg">
+										<img class="w-full object-cover" src="assets/images/kit.jpg" alt="RIPPLES OF IMPACT WITH EVERY WASH" loading="lazy">
+									</picture>
+
+									<div class="absolute inset-0 py-3xl px-4 md:p-6 lg:flex items-center justify-between">
+										<div class="text-white max-lg:mb-4">
+											<h6>RIPPLES OF IMPACT WITH EVERY WASH</h6>
+											<p class="mt-2">Clean, luxurious magic laundry is yours.</p>
+										</div>
+
+										<a href="#" class="btn btn-primary">Join Us</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="md:grid md:grid-cols-3 gap-8 items-start showcase__item relative">
+							<div class="md:col-span-2 md:order-2">
+								<div class="relative flex">
+									<picture class="w-full">
+										<source media="(min-width: 576px)" srcset="assets/images/join.jpg">
+										<source media="(max-width: 576px)" srcset="assets/images/join-m.jpg">
+										<img class="w-full object-cover" src="assets/images/join.jpg" alt="" loading="lazy">
+									</picture>
+								</div>
+							</div>
+
+							<div class="absolute inset-0 md:sticky md:top-[3.625rem] md:col-span-1 max-md:text-secondary">
+								<div class="py-3xl px-4 md:py-8 md:px-0 leading-base">
+									<p>Ripl Efek is an Earth-infused, skincare-inspired, eco-positive lifestyle company that
+										provides
+										cleaning products for the home and
+										laundry space. <br> <br>
+										This is the new era of transparent luxury. <br><br>
+										Solutions that not only safely clean our clothes, but nourish our skin, and care for the
+										planet.
+									</p>
+
+									<a href="#" class="mt-8 btn btn-primary">Join Us</a>
+
+								</div>
+							</div>
+						</div>
+						<div class="relative md:hidden showcase__item">
+							<div class="text-white absolute inset-0 py-3xl px-4 md:p-6">
+								<div class="md:grid grid-cols-3 gap-8">
+									<div class="md:col-span-1">
+										<p>THE ART OF SUSTAINABILITY</p>
+									</div>
+									<div class="md:col-span-2">
+										<p>Our commitment to quality and safety leads us to collaborate with like-minded individuals
+											in
+											field
+											testing our formulations. This
+											process
+											ensures that our products meet our high standards for efficacy and safety. We consider
+											field
+											testing to be the most important
+											step
+											in
+											our product development process, as it allows us to gather real-world data and feedback
+											from
+											a
+											diverse group of individuals.</p>
+										<a href="#" class="mt-8 btn btn-primary text-dark">Join Us</a>
+									</div>
+								</div>
+							</div>
+
+							<picture class="flex -z-1">
+								<source media="(min-width: 576px)" srcset="assets/images/sustainability.jpg">
+								<source media="(max-width: 576px)" srcset="assets/images/sustainability-m.jpg">
+								<img class="w-full object-cover" src="assets/images/sustainability.jpg" alt="" loading="lazy">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ./End show case -->
+
+			<section class="py-8 lg:py-[5.3125rem]">
+				<div class="container-fluid py-4 lg:py-0 overflow-auto">
+					<div class="flex flex-nowrap lg:grid grid-cols-3 gap-12 lg:gap-8 whitespace-nowrap">
+						<div><a href="#">EARTH-INFUSED</a></div>
+						<div><a href="#">SKINCARE-INSPIRED</a></div>
+						<div><a href="#">CONSCIOUS LAUNDRY</a></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Begin join us -->
+			<section class="relative max-md:hidden">
+				<div class="text-white absolute inset-0 px-6 py-8">
+					<div class="md:grid grid-cols-3 gap-8">
+						<div class="col-span-1">
+							<p class="font-secondary uppercase">THE ART OF SUSTAINABILITY</p>
+						</div>
+						<div class="md:col-span-2">
+							<p>Our commitment to quality and safety leads us to collaborate with like-minded individuals in field
+								testing our formulations. This
+								process
+								ensures that our products meet our high standards for efficacy and safety. We consider field
+								testing to be the most important
+								step
+								in
+								our product development process, as it allows us to gather real-world data and feedback from a
+								diverse group of individuals.</p>
+							<a href="#" class="mt-9 btn btn-primary text-dark">Join Us</a>
+						</div>
+					</div>
+				</div>
+
+				<picture class="flex -z-1">
+					<source media="(min-width: 576px)" srcset="assets/images/sustainability.jpg">
+					<source media="(max-width: 576px)" srcset="assets/images/sustainability.jpg">
+					<img class="w-full object-cover" src="assets/images/sustainability.jpg" alt="" loading="lazy">
+				</picture>
+			</section>
+			<!-- ./End join us -->
+
+			<!-- Begin story -->
+			<section class="story pb-12 md:py-12 lg:pt-[5.3125rem] lg:pb-[7rem] px-4 lg:px-6">
+				<div class="md:grid grid-cols-3 gap-8">
+					<div class="md:col-span-2 max-md:mb-12">
+						<div class="md:max-w-[92.48%] md:flex md:space-x-4">
+							<div class="md:w-[17.64%] mb-2 lg:mb-0">
+								<h6>OUR STORY</h6>
+							</div>
+							<div class="md:w-[82.359%]">
+								<blockquote class="text-h2 lg:text-h1 leading-tight">Founded by Shawnique Alexander, Ripl Efek looks at how we wash our clothes affect our
+									body, our earth and how it is
+									purchased.
+									<br><br>
+
+									“Looking at my life, I noticed that I was just being cluttered with unnecessary products, junk,
+									and toxic waste. As I
+									observed
+									my bathroom, my kitchen, my laundry room, I realized I was surrounded by silent killers that are
+									contaminating our MOTHER
+									EARTH,
+									starting with my home and I felt a strong calling to help eliminate it all– starting with the
+									clothes that my family put on
+									their body every day. What started as a consignment, second hand store concept evolved quickly
+									into identifying why clothes
+									were
+									so disposable in the first place. This desire to want more from our belongings and in return for
+									the earth we belong in, was
+									the
+									key reason to starting the Ripl Efek journey.  <br><br>
+
+									I hope you enjoy this journey with me, let’s move gently and powerfully together.”
+								</blockquote>
+								<a href="#" class="btn btn-primary mt-12 lg:mt-8">Learn More</a>
+							</div>
+						</div>
+					</div>
+					<div class="md:col-span-1">
+						<picture>
+							<source media="(min-width: 576px)" srcset="assets/images/story-placehoder.jpg">
+							<source media="(max-width: 576px)" srcset="assets/images/story-placehoder.jpg">
+							<img class="w-full object-cover" src=".assets/images/story-placehoder.jpg" alt="" width="385" height="482" loading="lazy">
+						</picture>
+						<p class="mt-3 lg:mt-6">Shawnique Alexander, Foune</p>
+					</div>
+				</div>
+			</section>
+			<!-- ./End story -->
+		</main>
+
+		<!-- Begin newsletter -->
+		<div
+			class="fixed bottom-12 right-[0.94375rem] lg:bottom-6 lg:right-6 bg-aqua py-6 pl-6 pr-9 newsletter w-full max-w-[345px] lg:max-w-[456px] hidden js-newsletter z-50">
+			<p>Join our newsletter for the latest news and receive 10% off your first purchase.</p>
+
+			<form action="#" class="mt-9">
+				<div class="relative">
+					<input class="input pr-14" type="text" placeholder="Email address" aria-label="Full name">
+					<button class="p-0 bg-transparent border-none absolute right-0">Submit</button>
+				</div>
+			</form>
+
+
+			<button class="absolute top-0 right-0 text-dark  w-6 h-6 flex items-center justify-center lg:bg-aqua js-newsletter-close" type="button"><svg
+					width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_1103_629)">
+						<path d="M9.2105 0.724609L0.72522 9.20989" stroke="currentColor" />
+						<path d="M9.27471 9.21185L0.789429 0.726562" stroke="currentColor" />
+					</g>
+					<defs>
+						<clipPath id="clip0_1103_629">
+							<rect width="10" height="10" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</button>
+		</div>
+		<!-- ./End newsletter -->
+
+		<!-- Begin cookie -->
+		<div class="cookie hidden fixed bottom-0 lg:bottom-6 right-0 lg:right-6 js-cookiebar z-50">
+			<div class="flex items-center lg:gap-1 py-[0.3125rem] px-[0.9375rem] lg:px-0 bg-secondary lg:bg-transparent">
+				<div class="lg:h-6 pr-6 lg:py-[0.1875rem] lg:px-2 lg:bg-light-extra max-md:text-12">By continuing to use this
+					site you consent with our <a href="#">cookie policy</a>.</div>
+				<button class="text-dark flex-grow-0 flex-shrink-0 basis-6 w-6 h-6 flexg- flex items-center justify-center lg:bg-light-extra js-cookie-close"
+					type="button"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_1103_629)">
+							<path d="M9.2105 0.724609L0.72522 9.20989" stroke="currentColor" />
+							<path d="M9.27471 9.21185L0.789429 0.726562" stroke="currentColor" />
+						</g>
+						<defs>
+							<clipPath id="clip0_1103_629">
+								<rect width="10" height="10" fill="white" />
+							</clipPath>
+						</defs>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<!-- ./End cookie -->
+
+
+		<!-- Begin footer -->
+		<footer class="theme-light pt-[0.9375rem] pb-[1.125rem] lg:pt-4 lg:pb-8 px-[0.9375rem] lg:px-6 group">
+			<div class="grid grid-cols-2 md:grid-cols-12 gap-3xl lg:gap-8 md:gap-x-6 md:gap-y-0 group-[.bg-dark]:text-secondary">
+				<div class="col-span-1 md:col-start-4 lg:col-start-7 md:col-end-7 lg:col-end-9">
+					<ul>
+						<li><a class="hover:underline" href="#">Our Story</a></li>
+						<li><a class="hover:underline" href="#">How to Use</a></li>
+						<li><a class="hover:underline" href="#">Hacks</a></li>
+						<li><a class="hover:underline" href="#">Instagram</a></li>
+						<li><a class="hover:underline" href="#">Tiktok</a></li>
+						<li><a class="hover:underline" href="#">Pinterest</a></li>
+					</ul>
+				</div>
+				<div class="col-start-2 col-span-1 md:col-start-7 lg:col-start-9 md:col-end-13">
+					<div class="lg:w-3/4 max-md:flex max-md:justify-end">
+						<ul>
+							<li><a class="hover:underline" href="#">FAQs</a></li>
+							<li><a class="hover:underline" href="#">Store Locator</a></li>
+							<li><a class="hover:underline" href="#">Shipping & Returns</a></li>
+							<li><a class="hover:underline" href="#">Privacy Policy</a></li>
+							<li><a class="hover:underline" href="#">Terms</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="md:row-start-2 col-span-2 md:col-start-7 lg:col-start-9 md:col-end-13 max-md:mb-[204px]">
+					<p class="lg:w-3/4">Ripl Efek’s mission is to ensure your threads stay fresh, your skin stays comfy, and
+						the world stays a little cleaner,
+						one wash at a time.</p>
+				</div>
+				<div class="col-span-2 md:row-start-3 md:col-start-1 md:col-span-5 lg:col-span-8 self-end">
+					<a href="index.html">
+						<svg class="max-w-full" width="480" height="73" viewBox="0 0 480 73" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M75.521 12.6038C68.2714 12.6038 62.4029 6.96547 62.4029 0L88.6473 0C88.6473 6.96547 82.7707 12.6038 75.5292 12.6038H75.521ZM64.5934 22.2628L64.5934 72.9921H86.4487L86.4487 22.2707L64.5934 22.2707V22.2628ZM96.3956 72.9921H118.251L118.251 55.3939H121.994C142.182 55.3939 153.012 42.1933 153.012 27.3907C153.012 12.5881 141.88 0 122.002 0L96.3956 0L96.3956 73V72.9921ZM121.684 18.996C126.579 18.996 130.74 21.8937 130.74 27.4928C130.74 33.0919 126.579 35.9896 121.684 35.9896H118.251V18.9882H121.684V18.996ZM158.856 72.9921L202.779 72.9921V52.8967H180.711V0L158.856 0V73V72.9921ZM248.991 72.9921L294.058 72.9921V53.894H270.642V45.892H294.058V26.6918L270.642 26.6918V19.1923L294.058 19.1923V0L248.991 0V73V72.9921ZM304.013 72.9921H325.664V45.892H347.83V26.6918L325.664 26.6918V19.1923L347.83 19.1923V0L304.013 0V73V72.9921ZM356.902 72.9921H401.97V53.894H378.553V45.892H401.97V26.6918L378.553 26.6918V19.1923L401.97 19.1923V0L356.902 0V73V72.9921ZM34.2869 72.9921L25.2064 55.3939H21.8553L21.8553 72.9921H0L0 0L25.6069 0C45.4843 0 56.6244 12.596 56.6244 27.3986C56.6244 36.3194 52.6931 44.6434 45.1492 49.8655L58.7577 73L34.2951 73L34.2869 72.9921ZM21.8472 35.9896H25.2799C30.1757 35.9896 34.3359 33.1861 34.3359 27.4928C34.3359 21.7995 30.1757 18.996 25.2799 18.996H21.8472V35.9974V35.9896ZM479.992 72.9921L452.252 35.8325L479.019 0L452.374 0L433.584 25.1684V0L411.933 0V73H433.584V46.5202L453.355 73H480L479.992 72.9921Z"
+								fill="currentColor" />
+						</svg>
+					</a>
+				</div>
+				<div class="col-span-2 md:row-start-3 md:col-start-7 lg:col-start-9 md:col-end-13">
+					<div class="newsletter md:mt-24 lg:mt-[12.625rem]">
+						<p>Sign up for the latest news</p>
+						<form action="#" class="mt-12 md:mt-8">
+							<div class="relative z-0 w-full group">
+								<input type="email" name="email"
+									class="block py-1.5 px-0 w-full text-body text-current bg-transparent border-0 border-b border-current appearance-none focus:outline-none focus:ring-0 group-[.bg-secondary]:border-dark"
+									placeholder="Email address" />
+								<button class="absolute right-0 bottom-1.5">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- End footer -->
+
+	</body>
+	<script src="assets/js/bundle.js"></script>
+
+</html>

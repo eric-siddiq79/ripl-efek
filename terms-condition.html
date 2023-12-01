@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Account</title>
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+	<link href="assets/fonts/GTAmericaMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link href="assets/fonts/GT-America-Standard-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<style>
+		@font-face {
+			font-family: 'GT America Mono';
+			src: url('assets/fonts/GTAmericaMono-Regular.woff2') format('woff2'),
+				url('assets/fonts/GTAmericaMono-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'GT America';
+			src: url('assets/fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+				url('assets/fonts/GT-America-Standard-Regular.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+	</style>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<!--Begin Header -->
+	<header class="group header header--default">
+		<div class="container-fluid header-inner bg-inherit flex items-center justify-between">
+			<a href="">
+				<svg width="138" height="21" viewBox="0 0 138 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M21.7123 3.62243C19.628 3.62243 17.9408 2.00193 17.9408 0L25.4861 0C25.4861 2.00193 23.7966 3.62243 21.7147 3.62243H21.7123ZM18.5706 6.39849L18.5706 20.9785H24.854L24.854 6.40075H18.5706V6.39849ZM27.7137 20.9785H33.9971V15.9206H35.0734C40.8774 15.9206 43.9909 12.1267 43.9909 7.87229C43.9909 3.61791 40.7905 0 35.0757 0L27.7137 0L27.7137 20.9807V20.9785ZM34.9841 5.45959C36.3916 5.45959 37.5877 6.29241 37.5877 7.90163C37.5877 9.51084 36.3916 10.3437 34.9841 10.3437H33.9971V5.45734H34.9841V5.45959ZM45.671 20.9785H58.2989V15.2029H51.9544V0L45.671 0V20.9807V20.9785ZM71.5848 20.9785L84.5417 20.9785V15.4895L77.8095 15.4895V13.1897L84.5417 13.1897V7.67142L77.8095 7.67142V5.51602L84.5417 5.51602V0L71.5848 0V20.9807V20.9785ZM87.4038 20.9785H93.6284V13.1897L100.001 13.1897V7.67142L93.6284 7.67142V5.51602L100.001 5.51602V0L87.4038 0V20.9807V20.9785ZM102.609 20.9785H115.566V15.4895H108.834V13.1897H115.566V7.67142L108.834 7.67142V5.51602L115.566 5.51602V0L102.609 0V20.9807V20.9785ZM9.85748 20.9785L7.24683 15.9206H6.28341L6.28341 20.9785H0L0 0L7.36197 0C13.0767 0 16.2795 3.62017 16.2795 7.87454C16.2795 10.4385 15.1493 12.8308 12.9804 14.3317L16.8928 20.9807L9.85983 20.9807L9.85748 20.9785ZM6.28106 10.3437L7.26798 10.3437C8.67552 10.3437 9.87158 9.53793 9.87158 7.90163C9.87158 6.26533 8.67552 5.45959 7.26798 5.45959H6.28106V10.3459V10.3437ZM137.998 20.9785L130.022 10.2985L137.718 0L130.058 0L124.655 7.23357V0L118.431 0V20.9807H124.655V13.3702L130.34 20.9807L138 20.9807L137.998 20.9785Z"
+						fill="currentColor" />
+				</svg>
+			</a>
+			<nav>
+				<ul class="nav-list flex items-center space-x-4 md:space-x-10 font-secondary">
+					<li class="nav-item"><button class="nav-link modal-trigger" data-target="#cart">BAG (0)</button></li>
+					<li class="nav-item"><button href="#" class="nav-link">MENU</button></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header -->
+
+	<!-- cart -->
+	<aside
+		class="cart bg-light-extra min-h-[467px] flex flex-col fixed top-0 z-[999] w-full md:max-w-[442px] right-0 max-md:h-full max-h-screen"
+		id="cart">
+		<div class="flex-auto px-6 py-5 h-full flex flex-col">
+			<div class="flex items-center justify-between">
+				<div>
+					Bag(<span>0</span>)
+				</div>
+				<button class="cart-close font-secondary">
+					CLOSE
+				</button>
+			</div>
+
+			<div class="pt-5 pb-6 max-h-[calc(100vh_-_122px)] md:max-h-[332px] overflow-y-auto overflow-x-hidden">
+				<div class="space-y-6">
+					<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+						<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+						<div>
+							<div class="flex space-x-5 justify-between">
+								<div>
+									<h6 class="mb-2">The starter kit</h6>
+									<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+								</div>
+								<p>$68</p>
+							</div>
+							<div class="flex space-x-5 justify-between">
+								<div class="quanity flex items-center space-x-2">
+									<button>-</button>
+									<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+										value="1">
+									<button>+</button>
+								</div>
+								<a class="underline" href="#">Remove</a>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<div class="flex space-x-5 justify-between">
+							<div>
+								<h6 class="mb-2">The starter kit</h6>
+								<p class="mb-3.5 text-dark/50">Unscented <br /> Refill every 8 weeks</p>
+							</div>
+							<p>$68</p>
+						</div>
+						<div class="flex space-x-5 justify-between">
+							<div class="quanity flex items-center space-x-2">
+								<button>-</button>
+								<input class="bg-transparent w-3 text-center focus:outline-none" type="number" min="1"
+									value="1">
+								<button>+</button>
+							</div>
+							<a class="underline" href="#">Remove</a>
+						</div>
+					</div>
+				</div> -->
+				</div>
+			</div>
+
+			<!-- suggested product -->
+			<div class="bg-aqua -mx-6 p-6">
+				<p class="mb-3.5">Would you like to try a different scent?</h6>
+				<div class="grid grid-cols-[75px_1fr] gap-4 md:gap-5">
+					<img src="assets/images/cart-item.png" width="75" height="93" alt="The starter kit">
+					<div>
+						<h6 class="mb-2">ASE REFILL</h6>
+						<p class="mb-8">$68</p>
+						<a href="#" class="underline">Add to Bag</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Show when cart is empty -->
+			<!-- <div class="pt-5 pb-6 flex-1 flex flex-col justify-center max-h-[calc(100vh_-_122px)] md:max-h-[332px]">
+			<div>
+				<p class="mb-6">Nothing in your bag.</p>
+				<a class="underline" href="#">Get Started</a>
+			</div>
+		</div> -->
+
+			<div class="border-t border-current pt-3.5 mt-auto">
+				<div class="flex items-center justify-between space-x-6 mb-3.5">
+					<p>Subtotal</p>
+					<p>$00</p>
+				</div>
+				<a class="btn btn-primary w-full" href="#">Checkbout</a>
+			</div>
+		</div>
+	</aside>
+	<!-- End Header -->
+
+	<main class="main">
+
+		<section class="py-12 md:py-[85px]">
+			<div class="container-fluid">
+				<div class="max-w-[997px] mx-auto">
+					<div class="mb-12 md:mb-[85px] text-center">
+						<h1>Terms & Conditions</h1>
+					</div>
+					<div class="content">
+						<p>This Terms of Use Agreement (this "Agreement") is a legal agreement between you and Bragg Live Food Products, LLC (hereinafter “Bragg”, “we”, “our”, or “us”) that governs your access or use of any portion of our website and the products, information and services made available to you when you visit our website (the “Site”). If you use our Site on behalf of another person or entity, then (a) all references to “you” and “your” throughout this Agreement will include that person or entity, (b) you represent that you are authorized to be bound by the terms of this Agreement on that person’s or entity’s behalf, and (c) in the event you or that person or entity violates this Agreement, that person or entity agrees to be responsible to us. By using or accessing the Site, you agree to be legally bound by this Agreement. Immediately discontinue use of the Site if you do not agree to all the terms of this Agreement.</p>
+
+						<p>Updates to this Agreement and the Site</p>
+
+						<p>We may revise or otherwise update this Agreement at any time. We encourage you to periodically review this Agreement to see if there have been any changes. Please check the date "Last Updated" at the top of this page. Changes to this Agreement are effective immediately, and your continued use of the Site represents your continued consent to be bound to this Agreement as revised. We may also make improvements or changes to the Site, or changes or improvements to the offerings on our Site, from time to time at our discretion, and we may do this at any time without any notice or liability to you or any other person.
+
+						<p>Unauthorized Uses</p>
+
+						<p>While using our Site, you must comply with all applicable statutes, orders, regulations, rules, and all other laws. You may not use our Site for any fraudulent or unlawful purpose, and you may not take any action to interfere with our Site. By way of example, without limitation, you may not (and you expressly agree, represent and warrant that you will not) do any of the following:</p>
+						<ul>
+							<li>Violate our Intellectual Property rights (defined below) or those of any third party;</li>
+							<li>Sell, resell, rent, license, sublicense or otherwise use any of the content or Intellectual Property on this Site to commercially profit or receive compensation or consideration of any kind;</li>
+							<li>Engage in speech that is threatening, abusive, harassing, defamatory, pornographic, discriminatory, vulgar, profane, libelous, violent, fraudulent, tortious, or otherwise objectionable, including unauthorized or unsolicited advertising;</li>
+							<li>Reproduce, duplicate or copy any portion of this Site;</li>
+							<li>Impersonate any person or entity, falsely state or otherwise misrepresent your affiliation with any person or entity or express, or imply that we endorse you or any statement you make;</li>
+							<li>Violate or attempt to violate the security of our Site;</li>
+							<li>Disseminate any viruses, worms, spyware, adware or other malicious computer code, file or program that is harmful, invasive or may or is intended to damage, change, hijack or monitor the Site or any of our software, hardware or equipment;</li>
+							<li>Use any data mining, bots, spiders, automated tools or similar data gathering and extraction methods, directly or indirectly, to collect any information from our Site;</li>
+							<li>Assist any persons in violating this Agreement or applicable statutes, orders, regulations, rules, and other laws governing the use of the Site.</li>
+							<li>Intellectual Property Rights</li>
+						</ul>
+
+						<p>All content ("Intellectual Property") available through the Site is protected by copyright laws, trademark laws, trade-secret laws, trade-dress laws, trade-name laws, unfair competition laws, and other laws protecting proprietary content. You acknowledge that all copyrights, trademarks, service marks, patents, trade-dress, look and feel, designs, layouts, logos, taglines, scripts, tutorials, artwork, and all other intellectual property or other proprietary rights of any type in and to the Site, and all modifications, derivative works, or copies, of the Site (or any portion thereof) regardless of who made them, shall remain the sole and exclusive property of Bragg. Bragg does offer a revocable, limited, non-exclusive license for certain uses of its Intellectual Property, subject to the following agreement, which is wholly incorporated as part of this Agreement by reference as if fully set forth herein, accessible here.</p>
+
+						<p>User-Submitted Information</p>
+
+						<p>You are solely responsible for any information you provide us, and you agree, represent and warrant that any and all information you transmit through our Site or to us by any other means is truthful, accurate, not misleading and offered in good faith, and you agree, represent and warrant that you have the right to submit, upload, provide or share such content. You also agree not upload, post or otherwise make available any content protected by copyright, trademark or other proprietary right of any third party (unless you have express written authority), and you shall be solely liable for any damages or any other harm resulting from the same.</p>
+
+						<p>By submitting any content to us (“User-Submitted Content”), other than personally identifiable information or bank account information related to payments made in connection with the purchase of our products or services, you grant to Bragg (or warrant that the owner of such content has expressly granted to Bragg) a royalty-free, perpetual, irrevocable and unrestricted right and license (a) to use, reproduce, display, modify, adapt, publish, translate, transmit, distribute or otherwise make available to others such User-Submitted Content (in whole or in part and for any purpose) worldwide and/or to incorporate it in other works in any form, media or technology now known or hereafter developed; (b) to exercise all copyright, trademark, publicity, privacy and other proprietary rights with regard to such User-Submitted Content; and (c) to use your name, likeness and/or other information in any and all media and/or communications. You also agree that the Bragg is free to use any ideas, concepts, know-how or techniques that you send to us for any purpose.</p>
+
+						<p>User-Accounts</p>
+
+						<p>If you have set up an account with Bragg, you agree to accurately maintain and update any information about yourself and your account. You further agree that you are responsible for all activities that occur under your account, and you explicitly acknowledge that you are solely responsible for maintaining the confidentiality of your login credentials and the security of your account. You also agree to notify us of any unauthorized use of your login credentials or any other breach of security that you become aware of by emailing us at info@bragg.com.</p>
+
+						<p>Third-Party Content and Links to Third-Party Websites</p>
+
+						<p>Any information, statements, opinions or other material provided by third parties and made available on our Site, including without limitation all links to any third-party websites (“Third-Party Content”), are not warranted by Bragg, and Bragg makes no guarantees about the validity, accuracy, truthfulness, completeness, or reliability of any Third-Party Content on our Site or any Third-Party Content contained on third-party websites made available by links on our Site. Under no circumstance will Bragg be liable for any loss or damage caused, directly or indirectly, by your reliance on any such Third-Party Content. If you decide to visit any linked website, you do so at your own risk. Bragg does not make any warranty or representation regarding, or endorse or otherwise sponsor, any linked websites or the information appearing thereon or any of the products or services described thereon.</p>
+
+						<p>Social Media Pages</p>
+
+						<p>We may maintain a presence on social media websites, including without limitation, Facebook, YouTube, LinkedIn, Twitter and other social networking sites (collectively, "Social Media Pages"), to share information about our products and services. All comments, visuals and other materials posted by visitors to our Social Media Pages do not necessarily reflect the opinions or ideas of Bragg, and we reserve the right to remove postings that we determine are inappropriate.
+
+						<p>Notice of Copyright Infringement</p>
+
+						<p>If you believe that any Content on our Site infringes upon any copyright which you own or control, you may send a written notification, containing the information required under 17 U.S.C. §512(c)(3), to our designated copyright agent at info@bragg.com.</p>
+
+						<p>Other Policies and Terms</p>
+
+						<p>This Agreement applies to your access to and use of the Site and does not alter in any way the terms or conditions of any other agreement or obligation you may have with Bragg. Any such additional policies and terms that apply to the use of all or portions of the Site are hereby incorporated by reference into this Agreement as if set forth fully herein. Please refer to and review all additional specific terms and conditions as applicable, including Bragg’s Privacy Policy, accessible here.</p>
+
+						<p>Minors Must Obtain Necessary Consent</p>
+
+						<p>If you are under 18 years of age (or the age of legal majority where you live), use of our Site is prohibited unless you have the permission of a parent or legal guardian who agrees to be bound by these Terms. If you are a parent or legal guardian of a user under the age of 18 (or the age of legal majority), you agree to be fully responsible for the acts or omissions of the minor, including any breach of this Agreement. If you are a user that is not located in the US, you represent and warrant that you are: (a) at least the minimum age required to legally enter into a contract in your jurisdiction or (b) have consent from a parent or legal guardian to use this Site. Regardless of jurisdiction, you further represent that you are legally and mentally competent to agree to these terms.</p>
+
+						<p>Disclaimers, Indemnity & Limitation of Liability</p>
+
+						<p>Our Site is provided “as is” and “as available” without warranties of any kind, either express or implied, including implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement or for damages of any kind arising out of the inability to use the Site or the Site’s features. You agree that Bragg will never be liable to you under any theory of liability—whether based in contract, tort, negligence, strict liability, warranty, or otherwise—for any indirect, consequential, incidental, or special damages or lost profits—and Bragg shall not have any liability or responsibility for any acts, omissions or conduct of any user or other third-party. You agree to indemnify and hold harmless Bragg from and against any and all claims, damages, losses, costs (including without limitation reasonable attorneys' fees) or other expenses that arise directly or indirectly out of your breach of any provision of this Agreement or your activities in connection with the Site. If any portion of these disclaimers or limitation of liability is found to be invalid or unenforceable for any reason, then the aggregate liability of Bragg shall not exceed one hundred dollars ($100).</p>
+
+						<p>Consent to Communication</p>
+
+						<p>If you provide us with a telephone number, email address, postal address, or other form of contact information, you expressly agree and consent that we, or our authorized service providers, can use that information to contact you. This means you also consent to receive electronic communications and you agree that all agreements, notices, disclosures and other communications that are provided to you electronically satisfy any legal requirement that such communications be in writing.</p>
+
+						<p>Effect of Invalidity</p>
+
+						<p>In the event a court having jurisdiction finds any portion of this Agreement unenforceable, that portion shall not be effective, and the remainder of this Agreement shall remain effective.</p>
+
+						<p>Waivers</p>
+
+						<p>No waiver, express or implied, by either party of any breach of or default under this Agreement will constitute a continuing waiver of such breach or default or be deemed to be a waiver of any preceding or subsequent breach or default.
+
+						<p>Relationship of the Parties</p>
+
+						<p>Nothing in this Agreement shall be construed as representing that one is an agent or employee of the other. Also, nothing in this Agreement creates an affiliation between you and Bragg or an endorsement or sponsorship of you by Bragg of any kind.
+
+						<p>Governing Law</p>
+
+						<p>Any dispute concerning this Agreement will be governed by and construed and enforced in accordance with the laws of California, except to the extent preempted by U.S. federal law, without regard to conflict of law rules or principles (whether of California or any other jurisdiction) that would cause the application of the laws of any other jurisdiction.</p>
+
+						<p>Termination</p>
+
+						<p>Bragg may suspend, limit or terminate all or a portion of your access to the Site at any time with or without notice and with or without cause, including without limitation, if Bragg believes that you have violated or acted inconsistently with the any of the provisions of this Agreement. All limitation of liability and indemnity, as well as any other provisions that by their nature should survive, shall survive any such termination.</p>
+
+
+
+						<p>BRAGG’S SMS/MMS TERMS & CONDITIONS</p>
+
+						<p>Please carefully read these SMS/MMS Terms & Conditions (the “SMS Terms”). By enrolling or otherwise agreeing to receive text messages from or on behalf of Bragg or by otherwise providing your phone number to Bragg, you agree to these SMS Terms, as well as Bragg’s Terms of Use and Privacy Policy, which are incorporated herein by reference and can be viewed at the links provided here, or at Bragg.com, and by joining, you represent and warrant that you: (i) have the right, authority, and capacity to consent to these Terms in their entirety; (ii) have read, understand, and agree to all of these Terms; and (iii) are over the age of majority in your state of residence.</p>
+
+						<p>PLEASE NOTE: THESE SMS TERMS CONTAIN AN ARBITRATION CLAUSE WITH A CLASS ACTION WAIVER THAT AFFECTS YOUR RIGHTS. THE ARBITRATION PROVISION AFFECTS HOW DISPUTES WITH BRAGG ARE RESOLVED. YOU AGREE TO BE BOUND BY THIS ARBITRATION PROVISION. IN ARBITRATION, THERE IS NO JUDGE OR JURY AND THERE IS LESS DISCOVERY AND APPELLATE REVIEW THAN IN COURT. PLEASE READ THESE SMS TERMS CAREFULLY.</p>
+
+						<p>In these Terms, “Bragg,”  “we,” “us,” or “our” means Bragg Live Food Products, LLC and any of its subsidiaries, divisions, or affiliates.</p>
+
+						<p>USERS THAT CHOOSE TO OPT IN</p>
+
+						<p>Bragg offers a promotional and marketing SMS/MMS Program (“Program”) that allows Users to receive SMS/MMS mobile messages that may be sent using an automatic dialing system, by or on behalf of Bragg, at the cell phone number you provide us. By affirmatively opting into the Program, such as through online or application-based enrollment forms or by voluntarily providing your cell phone number to Bragg, you consent to receive marketing, promotional, transactional, operational, or informational text messages at that phone number, including but not limited to order confirmations; shipping and delivery notifications; special offerings and deals, and general advertising of Bragg’s products. Bragg make’s no guarantee that it has the ability to deliver messages to all mobile carriers and message and data rates from your carrier may apply. Opting in to this Program is not a condition of purchasing any goods offered By Bragg..</p>
+
+						<p>USERS THAT CHOOSE TO OPT OUT</p>
+
+						<p>To stop participating in the Program, you agree to  reply STOP, END, CANCEL, UNSUBSCRIBE, or QUIT to any mobile message from us in order to opt out of the Program. After texting STOP, END, CANCEL, UNSUBSCRIBE, or QUIT, you may receive additional communications confirming that your request has been received and processed, and you may continue to receive text messages for a short period while Bragg processes your request. If you need further assistance, text HELP to the number sending the message or email us at bragg-cs@bragg.com.  By affirmatively opting in to our Program and being subject to these SMS Terms & Condition, you agree that the foregoing options are reasonable methods of opting out, and you agree that you were provided with reasonable and sufficient notice and instructions on how to opt out of the Program, and you agree that any other method of opting out, including, but not limited to, texting words other than those set forth above or verbally requesting one of our employees to remove you from our list, is not a reasonable means of opting out.</p>
+
+						<p>ELIGIBILITY, CHANGE IN PHONE NUMBER, AND DUTY TO NOTIFY AND INDEMINIFY</p>
+
+						<p>By opting into Bragg’s promotional text Program and being subject to these SMS Terms & Conditions or by otherwise providing your cell phone number to Bragg, you warrant that you are the age of majority in your jurisdiction. You further warrant that you are the current subscriber or authorized user of the phone number you have provided.</p>
+
+						<p>If you change, sell, transfer, forfeit, or deactivate the phone number you provided to Bragg, you agree to notify Bragg immediately and complete the User Opt Out process set forth above prior to ending your use of the mobile telephone number. You understand and agree that your agreement to do so is a material part of these terms and conditions and failure to do so constitutes a material breach of these SMS Terms & Conditions and Bragg’s Terms of Use.</p>
+
+						<p>YOU AGREE THAT YOU SHALL INDEMNIFY, DEFEND, AND HOLD US HARMLESS FROM ANY CLAIM OR LIABILITY RESULTING FROM YOUR FAILURE TO NOTIFY US OF A CHANGE IN THE INFORMATION YOU HAVE PROVIDED, INCLUDING ANY CLAIM OR LIABILITY UNDER THE TELEPHONE CONSUMER PROTECTION ACT, 47 U.S.C. § 227, et seq., OR SIMILAR STATE AND FEDERAL LAWS, AND ANY REGULATIONS PROMULGATED THEREUNDER RESULTING FROM US ATTEMPTING TO CONTACT YOU AT THE MOBILE TELEPHONE NUMBER YOU PROVIDED.</p>
+
+						<p>Our Disclaimer of Warranty: You acknowledge and agree that we will have no liability associated with or arising from your failure to provide accurate enrollment information, including, without limitation, your failure to receive offers and important information and updates about the Program. If we have reasonable grounds to suspect that the information you provided is untrue, inaccurate, or incomplete, we may suspend or terminate your enrollment in the Program. The Program is offered on an "as-is" basis and may not be available in all areas at all times and may not continue to work in the event of product, software, coverage or other changes made by your wireless carrier. We will not be liable for any delays or failures in the receipt of any mobile messages connected with this Program. messages.</p>
+
+						<p>DISPUTE RESOLUTION</p>
+
+						<p>You and Bragg agree that any and all controversies, disputes, demands, counts, claims, or causes of action between you and Bragg, or between you and Stodge, LLC d/b/a Postscript or any other third-party service provider acting on Our behalf to transmit the mobile messages within the scope of the Program, or between you and Bragg’s employees, agents, affiliates, subsidiaries, successors, representatives, or assigns (“Dispute(s)”), shall be resolved through binding and confidential arbitration, except that you or Bragg may elect to have a Dispute heard in small claims court if it qualifies for hearing by such a court. “Dispute” shall be interpreted broadly and shall also include all Disputes that arose before your agreement to these SMS Terms, and which arise after the termination of this agreement, and issues related to the scope, validity, and/or enforceability of this arbitration agreement.</p>
+
+						<p>YOU ACKNOWLEDGE AND AGREE THAT YOU AND BRAGG ARE EACH WAIVING YOUR RIGHTS TO SUE IN COURT, INCLUDING RIGHTS TO RECEIVE A TRIAL BY JURY OR TO PARTICIPATE AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS ACTION LAWSUIT, CLASS-WIDE ARBITRATION, PRIVATE ATTORNEY GENERAL ACTION, OR ANY OTHER REPRESENTATIVE PROCEEDING.</p>
+
+						<p>The parties agree to submit the dispute to binding arbitration in accordance with the Commercial Arbitration Rules of the American Arbitration Association (“AAA”) then in effect. Except as otherwise provided herein, the arbitrator shall apply the substantive laws of the Federal Judicial Circuit in which Bragg’s principle place of business is located, without regard to its conflict of laws rules. Within ten (10) calendar days after the arbitration demand is served upon a party, the parties must jointly select an arbitrator with at least five years’ experience in that capacity and who has knowledge of and experience with the subject matter of the dispute. If the parties do not agree on an arbitrator within ten (10) calendar days, a party may petition the AAA to appoint an arbitrator, who must satisfy the same experience requirement. In the event of a dispute, the arbitrator shall decide the enforceability and interpretation of this arbitration agreement in accordance with the Federal Arbitration Act (“FAA”). The parties also agree that the AAA’s rules governing Emergency Measures of Protection shall apply in lieu of seeking emergency injunctive relief from a court. The decision of the arbitrator shall be final and binding, and no party shall have rights of appeal except for those provided in section 10 of the FAA. Each party shall bear its share of the fees paid for the arbitrator and the administration of the arbitration; however, the arbitrator shall have the power to order one party to pay all or any portion of such fees as part of a well-reasoned decision. The parties agree that the arbitrator shall have the authority to award attorneys’ fees only to the extent expressly authorized by statute or contract. The arbitrator shall have no authority to award punitive damages and each party hereby waives any right to seek or recover punitive damages with respect to any dispute resolved by arbitration.</p>
+
+						<p>Miscellaneous: You warrant and represent to Us that you have all necessary rights, power, and authority to agree to these Terms and perform your obligations hereunder, and nothing contained in this Agreement or in the performance of such obligations will place you in breach of any other contract or obligation. The failure of either party to exercise in any respect any right provided for herein will not be deemed a waiver of any further rights hereunder. If any provision of this Agreement is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that this Agreement will otherwise remain in full force and effect and enforceable. Any new features, changes, updates or improvements of the Program shall be subject to this Agreement unless explicitly stated otherwise in writing. We reserve the right to change this Agreement from time to time. Any updates to this Agreement shall be communicated to you. You acknowledge your responsibility to review this Agreement from time to time and to be aware of any such changes. By continuing to participate in the Program after any such changes, you accept this Agreement, as modified.</p>
+
+						<p>CHANGES TO THE SMS TERMS</p>
+
+						<p>These SMS Terms may be updated by Bragg at any time without prior notice. By continuing to be enrolled in any Bragg promotional text messaging program, or by providing your cell phone number for transactional, operational, or informational text messages, you agree to any changes. Updates to these SMS Terms do not provide you with a new opportunity to opt out of arbitration.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Begin newsletter -->
+	<div
+		class="fixed bottom-12 right-[0.94375rem] lg:bottom-6 lg:right-6 bg-aqua py-6 pl-6 pr-9 newsletter w-full max-w-[345px] lg:max-w-[456px] hidden js-newsletter z-50">
+		<p>Join our newsletter for the latest news and receive 10% off your first purchase.</p>
+
+		<form action="#" class="mt-9">
+			<div class="relative">
+				<input class="input pr-14" type="text" placeholder="Email address" aria-label="Full name">
+				<button class="p-0 bg-transparent border-none absolute right-0">Submit</button>
+			</div>
+		</form>
+
+
+		<button
+			class="absolute top-0 right-0 text-dark  w-6 h-6 flex items-center justify-center lg:bg-aqua js-newsletter-close"
+			type="button"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<g clip-path="url(#clip0_1103_629)">
+					<path d="M9.2105 0.724609L0.72522 9.20989" stroke="currentColor" />
+					<path d="M9.27471 9.21185L0.789429 0.726562" stroke="currentColor" />
+				</g>
+				<defs>
+					<clipPath id="clip0_1103_629">
+						<rect width="10" height="10" fill="white" />
+					</clipPath>
+				</defs>
+			</svg>
+		</button>
+	</div>
+	<!-- ./End newsletter -->
+
+	<!-- Begin cookie -->
+	<div class="cookie hidden fixed bottom-0 lg:bottom-6 right-0 lg:right-6 js-cookiebar z-50">
+		<div class="flex items-center lg:gap-1 py-[0.3125rem] px-[0.9375rem] lg:px-0 bg-secondary lg:bg-transparent">
+			<div class="lg:h-6 pr-6 lg:py-[0.1875rem] lg:px-2 lg:bg-secondary max-md:text-12">By continuing to use this
+				site you consent with our <a href="#">cookie policy</a>.</div>
+			<button
+				class="text-dark flex-grow-0 flex-shrink-0 basis-6 w-6 h-6 flexg- flex items-center justify-center lg:bg-secondary js-cookie-close"
+				type="button"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_1103_629)">
+						<path d="M9.2105 0.724609L0.72522 9.20989" stroke="currentColor" />
+						<path d="M9.27471 9.21185L0.789429 0.726562" stroke="currentColor" />
+					</g>
+					<defs>
+						<clipPath id="clip0_1103_629">
+							<rect width="10" height="10" fill="white" />
+						</clipPath>
+					</defs>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<!-- ./End cookie -->
+
+
+	<!-- Begin footer -->
+	<footer class="theme-light pt-[0.9375rem] pb-[1.125rem] lg:pt-4 lg:pb-8 px-[0.9375rem] lg:px-6 group">
+		<div class="grid grid-cols-2 md:grid-cols-12 gap-3xl lg:gap-8 md:gap-y-0 group-[.bg-dark]:text-secondary">
+			<div class="col-span-1 md:col-start-4 lg:col-start-7 md:col-end-7 lg:col-end-9">
+				<ul>
+					<li><a class="hover:underline" href="#">Our Story</a></li>
+					<li><a class="hover:underline" href="#">How to Use</a></li>
+					<li><a class="hover:underline" href="#">Hacks</a></li>
+					<li><a class="hover:underline" href="#">Instagram</a></li>
+					<li><a class="hover:underline" href="#">Tiktok</a></li>
+					<li><a class="hover:underline" href="#">Pinterest</a></li>
+				</ul>
+			</div>
+			<div class="col-start-2 col-span-1 md:col-start-7 lg:col-start-9 md:col-end-13">
+				<div class="lg:w-3/4 max-md:flex max-md:justify-end">
+					<ul>
+						<li><a class="hover:underline" href="#">FAQs</a></li>
+						<li><a class="hover:underline" href="#">Store Locator</a></li>
+						<li><a class="hover:underline" href="#">Shipping & Returns</a></li>
+						<li><a class="hover:underline" href="#">Privacy Policy</a></li>
+						<li><a class="hover:underline" href="#">Terms</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="md:row-start-2 col-span-2 md:col-start-7 lg:col-start-9 md:col-end-13 max-md:mb-[204px]">
+				<p class="lg:w-3/4">Ripl Efek’s mission is to ensure your threads stay fresh, your skin stays comfy, and
+					the world stays a little cleaner,
+					one wash at a time.</p>
+			</div>
+			<div class="col-span-2 md:row-start-3 md:col-start-1 md:col-span-5 lg:col-span-8 self-end">
+				<a href="index.html">
+					<svg class="max-w-full" width="480" height="73" viewBox="0 0 480 73" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M75.521 12.6038C68.2714 12.6038 62.4029 6.96547 62.4029 0L88.6473 0C88.6473 6.96547 82.7707 12.6038 75.5292 12.6038H75.521ZM64.5934 22.2628L64.5934 72.9921H86.4487L86.4487 22.2707L64.5934 22.2707V22.2628ZM96.3956 72.9921H118.251L118.251 55.3939H121.994C142.182 55.3939 153.012 42.1933 153.012 27.3907C153.012 12.5881 141.88 0 122.002 0L96.3956 0L96.3956 73V72.9921ZM121.684 18.996C126.579 18.996 130.74 21.8937 130.74 27.4928C130.74 33.0919 126.579 35.9896 121.684 35.9896H118.251V18.9882H121.684V18.996ZM158.856 72.9921L202.779 72.9921V52.8967H180.711V0L158.856 0V73V72.9921ZM248.991 72.9921L294.058 72.9921V53.894H270.642V45.892H294.058V26.6918L270.642 26.6918V19.1923L294.058 19.1923V0L248.991 0V73V72.9921ZM304.013 72.9921H325.664V45.892H347.83V26.6918L325.664 26.6918V19.1923L347.83 19.1923V0L304.013 0V73V72.9921ZM356.902 72.9921H401.97V53.894H378.553V45.892H401.97V26.6918L378.553 26.6918V19.1923L401.97 19.1923V0L356.902 0V73V72.9921ZM34.2869 72.9921L25.2064 55.3939H21.8553L21.8553 72.9921H0L0 0L25.6069 0C45.4843 0 56.6244 12.596 56.6244 27.3986C56.6244 36.3194 52.6931 44.6434 45.1492 49.8655L58.7577 73L34.2951 73L34.2869 72.9921ZM21.8472 35.9896H25.2799C30.1757 35.9896 34.3359 33.1861 34.3359 27.4928C34.3359 21.7995 30.1757 18.996 25.2799 18.996H21.8472V35.9974V35.9896ZM479.992 72.9921L452.252 35.8325L479.019 0L452.374 0L433.584 25.1684V0L411.933 0V73H433.584V46.5202L453.355 73H480L479.992 72.9921Z"
+							fill="currentColor" />
+					</svg>
+				</a>
+			</div>
+			<div class="col-span-2 md:row-start-3 md:col-start-7 lg:col-start-9 md:col-end-13">
+				<div class="newsletter md:mt-24 lg:mt-[12.625rem]">
+					<p>Sign up for the latest news</p>
+					<form action="#" class="mt-12 md:mt-8">
+						<div class="relative z-0 w-full group">
+							<input type="email" name="email"
+								class="block py-1.5 px-0 w-full text-body text-current bg-transparent border-0 border-b border-current appearance-none focus:outline-none focus:ring-0 group-[.bg-secondary]:border-dark"
+								placeholder="Email address" />
+							<button class="absolute right-0 bottom-1.5">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer -->
+
+</body>
+<script src="assets/js/bundle.js"></script>
+
+</html>
